@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		389119EE164A233100983FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119ED164A233100983FB3 /* UIKit.framework */; };
+		389119F0164A233100983FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119EF164A233100983FB3 /* Foundation.framework */; };
+		389119F2164A233100983FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119F1164A233100983FB3 /* CoreGraphics.framework */; };
+		389119F8164A233100983FB3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 389119F6164A233100983FB3 /* InfoPlist.strings */; };
+		389119FA164A233100983FB3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 389119F9164A233100983FB3 /* main.m */; };
+		389119FE164A233100983FB3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 389119FD164A233100983FB3 /* AppDelegate.m */; };
+		38911A00164A233100983FB3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 389119FF164A233100983FB3 /* Default.png */; };
+		38911A02164A233100983FB3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38911A01164A233100983FB3 /* Default@2x.png */; };
+		38911A04164A233100983FB3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 38911A03164A233100983FB3 /* Default-568h@2x.png */; };
+		38911A07164A233100983FB3 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38911A05164A233100983FB3 /* MainStoryboard.storyboard */; };
+		38911A0A164A233100983FB3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38911A09164A233100983FB3 /* ViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		389119E9164A233100983FB3 /* BranzaBaseCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BranzaBaseCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		389119ED164A233100983FB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		389119EF164A233100983FB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		389119F1164A233100983FB3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		389119F5164A233100983FB3 /* BranzaBaseCode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BranzaBaseCode-Info.plist"; sourceTree = "<group>"; };
+		389119F7164A233100983FB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		389119F9164A233100983FB3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		389119FB164A233100983FB3 /* BranzaBaseCode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BranzaBaseCode-Prefix.pch"; sourceTree = "<group>"; };
+		389119FC164A233100983FB3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		389119FD164A233100983FB3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		389119FF164A233100983FB3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		38911A01164A233100983FB3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		38911A03164A233100983FB3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		38911A06164A233100983FB3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		38911A08164A233100983FB3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		38911A09164A233100983FB3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		389119E6164A233100983FB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389119EE164A233100983FB3 /* UIKit.framework in Frameworks */,
+				389119F0164A233100983FB3 /* Foundation.framework in Frameworks */,
+				389119F2164A233100983FB3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		389119DE164A233100983FB3 = {
+			isa = PBXGroup;
+			children = (
+				389119F3164A233100983FB3 /* BranzaBaseCode */,
+				389119EC164A233100983FB3 /* Frameworks */,
+				389119EA164A233100983FB3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		389119EA164A233100983FB3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				389119E9164A233100983FB3 /* BranzaBaseCode.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		389119EC164A233100983FB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				389119ED164A233100983FB3 /* UIKit.framework */,
+				389119EF164A233100983FB3 /* Foundation.framework */,
+				389119F1164A233100983FB3 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		389119F3164A233100983FB3 /* BranzaBaseCode */ = {
+			isa = PBXGroup;
+			children = (
+				389119FC164A233100983FB3 /* AppDelegate.h */,
+				389119FD164A233100983FB3 /* AppDelegate.m */,
+				38911A05164A233100983FB3 /* MainStoryboard.storyboard */,
+				38911A08164A233100983FB3 /* ViewController.h */,
+				38911A09164A233100983FB3 /* ViewController.m */,
+				389119F4164A233100983FB3 /* Supporting Files */,
+			);
+			path = BranzaBaseCode;
+			sourceTree = "<group>";
+		};
+		389119F4164A233100983FB3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				389119F5164A233100983FB3 /* BranzaBaseCode-Info.plist */,
+				389119F6164A233100983FB3 /* InfoPlist.strings */,
+				389119F9164A233100983FB3 /* main.m */,
+				389119FB164A233100983FB3 /* BranzaBaseCode-Prefix.pch */,
+				389119FF164A233100983FB3 /* Default.png */,
+				38911A01164A233100983FB3 /* Default@2x.png */,
+				38911A03164A233100983FB3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		389119E8164A233100983FB3 /* BranzaBaseCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38911A0D164A233100983FB3 /* Build configuration list for PBXNativeTarget "BranzaBaseCode" */;
+			buildPhases = (
+				389119E5164A233100983FB3 /* Sources */,
+				389119E6164A233100983FB3 /* Frameworks */,
+				389119E7164A233100983FB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BranzaBaseCode;
+			productName = BranzaBaseCode;
+			productReference = 389119E9164A233100983FB3 /* BranzaBaseCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		389119E0164A233100983FB3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = Branza;
+			};
+			buildConfigurationList = 389119E3164A233100983FB3 /* Build configuration list for PBXProject "BranzaBaseCode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 389119DE164A233100983FB3;
+			productRefGroup = 389119EA164A233100983FB3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				389119E8164A233100983FB3 /* BranzaBaseCode */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		389119E7164A233100983FB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389119F8164A233100983FB3 /* InfoPlist.strings in Resources */,
+				38911A00164A233100983FB3 /* Default.png in Resources */,
+				38911A02164A233100983FB3 /* Default@2x.png in Resources */,
+				38911A04164A233100983FB3 /* Default-568h@2x.png in Resources */,
+				38911A07164A233100983FB3 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		389119E5164A233100983FB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				389119FA164A233100983FB3 /* main.m in Sources */,
+				389119FE164A233100983FB3 /* AppDelegate.m in Sources */,
+				38911A0A164A233100983FB3 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		389119F6164A233100983FB3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				389119F7164A233100983FB3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38911A05164A233100983FB3 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38911A06164A233100983FB3 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38911A0B164A233100983FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		38911A0C164A233100983FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38911A0E164A233100983FB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BranzaBaseCode/BranzaBaseCode-Prefix.pch";
+				INFOPLIST_FILE = "BranzaBaseCode/BranzaBaseCode-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38911A0F164A233100983FB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BranzaBaseCode/BranzaBaseCode-Prefix.pch";
+				INFOPLIST_FILE = "BranzaBaseCode/BranzaBaseCode-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		389119E3164A233100983FB3 /* Build configuration list for PBXProject "BranzaBaseCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38911A0B164A233100983FB3 /* Debug */,
+				38911A0C164A233100983FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38911A0D164A233100983FB3 /* Build configuration list for PBXNativeTarget "BranzaBaseCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38911A0E164A233100983FB3 /* Debug */,
+				38911A0F164A233100983FB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 389119E0164A233100983FB3 /* Project object */;
+}
