@@ -30,4 +30,17 @@
     [super didReceiveMemoryWarning];
 }
 
+#pragma mark -
+#pragma mark IBActions
+
+- (IBAction)callButton:(id)sender
+{
+    NSString *phoneNumber = @"866-323-7538";
+    
+    NSString *cleanedString  = [[phoneNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+    NSURL *cleanedCallString = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", cleanedString]];
+    
+    UIApplication *application = [UIApplication sharedApplication];
+    [application openURL:cleanedCallString];
+}
 @end

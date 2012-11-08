@@ -10,4 +10,6 @@
 
 @interface ContactUsViewController : UIViewController
 
+- (IBAction)callButton:(id)sender;
+
 @end
