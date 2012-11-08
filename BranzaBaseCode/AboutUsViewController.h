@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
+#import "MessageUI/MessageUI.h"
 
-@interface AboutUsViewController : UIViewController
+@interface AboutUsViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
+{
+    SLComposeViewController *mySLComposerSheet;
+}
+
+// IBACTIONS
+- (IBAction)ShareButton:(id)sender;
+
+// METHODS
+- (void)openEmail;
+- (void)openTwitterAPI;
+- (void)openFacebookAPI;
 
 @end
