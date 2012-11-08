@@ -21,7 +21,9 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController setNavigationBarHidden:NO
+                                             animated:YES];
+    
     [self.navigationController.navigationBar.topItem setTitle:@"About Us"];
 }
 
@@ -81,9 +83,31 @@
     switch (result)
     {
         case MFMailComposeResultCancelled:
+            
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email"
+                                                            message:@"The email was cancelled"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        }
+            
             break;
+            
         case MFMailComposeResultSaved:
+            
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email"
+                                                            message:@"The email was saved"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        }
+            
             break;
+            
         case MFMailComposeResultSent:
             
         {
@@ -96,10 +120,22 @@
         }
             
             break;
+            
         case MFMailComposeResultFailed:
+            
+        {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email"
+                                                            message:@"The email failed to send"
+                                                           delegate:self
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles: nil];
+            [alert show];
+        }
+            
             break;
             
         default:
+            
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Email"
                                                             message:@"Sending Failed - Unknown Error"
@@ -145,13 +181,12 @@
     
     [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result){
         
-        NSLog(@"dfsdf");
-        NSString *output;
+        NSString *output = nil;
         
         switch (result)
         {
             case SLComposeViewControllerResultCancelled:
-                output = @"ACtionCancelled";
+                output = @"Action Cancelled";
                 break;
                 
             case SLComposeViewControllerResultDone:
@@ -199,13 +234,12 @@
     
     [mySLComposerSheet setCompletionHandler:^(SLComposeViewControllerResult result){
         
-        NSLog(@"dfsdf");
-        NSString *output;
+        NSString *output = nil;
         
         switch (result)
         {
             case SLComposeViewControllerResultCancelled:
-                output = @"ACtionCancelled";
+                output = @"Action Cancelled";
                 break;
                 
             case SLComposeViewControllerResultDone:
