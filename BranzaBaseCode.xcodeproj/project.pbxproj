@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382CE679164B4D4900BD34FA /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382CE678164B4D4900BD34FA /* MessageUI.framework */; };
+		382CE67C164B4D5200BD34FA /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382CE67B164B4D5200BD34FA /* Twitter.framework */; };
+		382CE67E164B517200BD34FA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 382CE67D164B517200BD34FA /* Social.framework */; };
 		389119EE164A233100983FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119ED164A233100983FB3 /* UIKit.framework */; };
 		389119F0164A233100983FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119EF164A233100983FB3 /* Foundation.framework */; };
 		389119F2164A233100983FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119F1164A233100983FB3 /* CoreGraphics.framework */; };
@@ -22,9 +25,15 @@
 		38BC6B81164AE23F00FB3786 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC6B80164AE23F00FB3786 /* MenuViewController.m */; };
 		38BC6B85164AE2DA00FB3786 /* autoCADKeyboardShortcuts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 38BC6B84164AE2DA00FB3786 /* autoCADKeyboardShortcuts.pdf */; };
 		38BC6B88164AE56900FB3786 /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC6B87164AE56900FB3786 /* AboutUsViewController.m */; };
+		38BC6B8B164AEC3800FB3786 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38BC6B8A164AEC3800FB3786 /* LocationViewController.m */; };
+		38BC6B8D164AECD500FB3786 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BC6B8C164AECD500FB3786 /* MapKit.framework */; };
+		38BC6B8F164B201B00FB3786 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38BC6B8E164B201B00FB3786 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382CE678164B4D4900BD34FA /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		382CE67B164B4D5200BD34FA /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		382CE67D164B517200BD34FA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		389119E9164A233100983FB3 /* BranzaBaseCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BranzaBaseCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389119ED164A233100983FB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		389119EF164A233100983FB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +57,10 @@
 		38BC6B84164AE2DA00FB3786 /* autoCADKeyboardShortcuts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = autoCADKeyboardShortcuts.pdf; sourceTree = "<group>"; };
 		38BC6B86164AE56900FB3786 /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		38BC6B87164AE56900FB3786 /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		38BC6B89164AEC3800FB3786 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		38BC6B8A164AEC3800FB3786 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		38BC6B8C164AECD500FB3786 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		38BC6B8E164B201B00FB3786 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382CE67E164B517200BD34FA /* Social.framework in Frameworks */,
+				382CE67C164B4D5200BD34FA /* Twitter.framework in Frameworks */,
+				382CE679164B4D4900BD34FA /* MessageUI.framework in Frameworks */,
+				38BC6B8F164B201B00FB3786 /* CoreLocation.framework in Frameworks */,
+				38BC6B8D164AECD500FB3786 /* MapKit.framework in Frameworks */,
 				389119EE164A233100983FB3 /* UIKit.framework in Frameworks */,
 				389119F0164A233100983FB3 /* Foundation.framework in Frameworks */,
 				389119F2164A233100983FB3 /* CoreGraphics.framework in Frameworks */,
@@ -84,6 +102,11 @@
 		389119EC164A233100983FB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				382CE67D164B517200BD34FA /* Social.framework */,
+				382CE67B164B4D5200BD34FA /* Twitter.framework */,
+				382CE678164B4D4900BD34FA /* MessageUI.framework */,
+				38BC6B8E164B201B00FB3786 /* CoreLocation.framework */,
+				38BC6B8C164AECD500FB3786 /* MapKit.framework */,
 				389119ED164A233100983FB3 /* UIKit.framework */,
 				389119EF164A233100983FB3 /* Foundation.framework */,
 				389119F1164A233100983FB3 /* CoreGraphics.framework */,
@@ -147,10 +170,12 @@
 		38BC6B7B164ADF9B00FB3786 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				38BC6B7C164AE06300FB3786 /* ContactUsViewController.h */,
-				38BC6B7D164AE06300FB3786 /* ContactUsViewController.m */,
 				38BC6B7F164AE23F00FB3786 /* MenuViewController.h */,
 				38BC6B80164AE23F00FB3786 /* MenuViewController.m */,
+				38BC6B7C164AE06300FB3786 /* ContactUsViewController.h */,
+				38BC6B7D164AE06300FB3786 /* ContactUsViewController.m */,
+				38BC6B89164AEC3800FB3786 /* LocationViewController.h */,
+				38BC6B8A164AEC3800FB3786 /* LocationViewController.m */,
 				38BC6B86164AE56900FB3786 /* AboutUsViewController.h */,
 				38BC6B87164AE56900FB3786 /* AboutUsViewController.m */,
 			);
@@ -246,6 +271,7 @@
 				38BC6B7E164AE06300FB3786 /* ContactUsViewController.m in Sources */,
 				38BC6B81164AE23F00FB3786 /* MenuViewController.m in Sources */,
 				38BC6B88164AE56900FB3786 /* AboutUsViewController.m in Sources */,
+				38BC6B8B164AEC3800FB3786 /* LocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
