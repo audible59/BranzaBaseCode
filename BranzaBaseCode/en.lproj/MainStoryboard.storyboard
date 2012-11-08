@@ -78,7 +78,27 @@
                     <view key="view" contentMode="scaleToFill" id="C5C-ge-k04">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-Ks-yUM" userLabel="Location Button">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Location">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="eoo-Dq-o1C" kind="push" id="Qzq-2f-lsL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xSl-Ks-yUM" firstAttribute="leading" secondItem="C5C-ge-k04" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="RI3-v3-vrh"/>
+                            <constraint firstAttribute="bottom" secondItem="xSl-Ks-yUM" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="Y8x-Os-tjh"/>
+                            <constraint firstAttribute="trailing" secondItem="xSl-Ks-yUM" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="fxl-zu-V88"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nox-j0-b6a"/>
                 </viewController>
@@ -86,20 +106,67 @@
             </objects>
             <point key="canvasLocation" x="225" y="237"/>
         </scene>
+        <!--Location View Controller-->
+        <scene sceneID="NQE-3H-KGR">
+            <objects>
+                <viewController id="eoo-Dq-o1C" userLabel="Location View Controller" customClass="LocationViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nU1-OG-2fN">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-cq-AAs"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gyg-cq-AAs" firstAttribute="bottom" secondItem="nU1-OG-2fN" secondAttribute="bottom" type="default" id="Iv2-nV-crq"/>
+                            <constraint firstItem="Gyg-cq-AAs" firstAttribute="trailing" secondItem="nU1-OG-2fN" secondAttribute="trailing" type="default" id="JRz-e1-6pp"/>
+                            <constraint firstItem="Gyg-cq-AAs" firstAttribute="leading" secondItem="nU1-OG-2fN" secondAttribute="leading" type="default" id="ia7-HI-D4h"/>
+                            <constraint firstItem="Gyg-cq-AAs" firstAttribute="top" secondItem="nU1-OG-2fN" secondAttribute="top" type="default" id="puD-qf-SKA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YRe-je-QWa"/>
+                    <connections>
+                        <outlet property="mapView" destination="Gyg-cq-AAs" id="gSz-DL-U27"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2rT-TA-1jI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702" y="237"/>
+        </scene>
         <!--About Us View Controller-->
         <scene sceneID="EGF-TB-iLo">
             <objects>
-                <viewController id="ENE-NF-5eZ" userLabel="About Us View Controller" sceneMemberID="viewController">
+                <viewController id="ENE-NF-5eZ" userLabel="About Us View Controller" customClass="AboutUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QZt-am-vYB">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56n-K4-32Y" userLabel="Share Button">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Share">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ShareButton:" destination="ENE-NF-5eZ" eventType="touchUpInside" id="Pt2-4a-nIh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="56n-K4-32Y" firstAttribute="leading" secondItem="QZt-am-vYB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="a29-49-Fmh"/>
+                            <constraint firstAttribute="trailing" secondItem="56n-K4-32Y" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="cpI-TA-jXF"/>
+                            <constraint firstAttribute="bottom" secondItem="56n-K4-32Y" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="xaa-Tr-0vg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2G7-Fw-RcI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLi-67-A4T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="225" y="948"/>
+            <point key="canvasLocation" x="225" y="1756"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="VkP-gU-YPo">
