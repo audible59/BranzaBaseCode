@@ -148,7 +148,7 @@
             break;
     }
     
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark -
@@ -279,7 +279,7 @@
     
     if (controller)
     {
-        [self presentModalViewController:controller animated:YES];
+        [self presentViewController:controller animated:YES completion:nil];
     }
 }
 
