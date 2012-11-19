@@ -33,8 +33,21 @@
 #pragma mark -
 #pragma mark IBActions
 
+/*
+ 
+ FUNCTION    - callButton:(id)sender
+ 
+ PARAMETERS  - sender
+ 
+ DESCRIPTION - This Function will set up and allow the user to place a call
+ 
+ TODO's      - Add the proper telephone number
+ 
+ */
+
 - (IBAction)callButton:(id)sender
 {
+    // Add the proper telephone number
     NSString *phoneNumber = @"866-323-7538";
     
     NSString *cleanedString  = [[phoneNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];

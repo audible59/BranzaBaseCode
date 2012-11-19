@@ -19,6 +19,18 @@
 #pragma mark -
 #pragma mark View Life Cycle
 
+/*
+ 
+ FUNCTION    - viewDidLoad
+ 
+ PARAMETERS  - None
+ 
+ DESCRIPTION - This Function will set up View once it has been loaded into memory
+ 
+ TODO's      - Add the proper latitude and longitude values; Add the proper Drop Pin Title; Add the proper Drop Pin Subtitle
+ 
+ */
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -38,12 +50,17 @@
         
     CLLocationCoordinate2D zoomLocation;
     
+    // Add the proper latitude and longitude values
     zoomLocation.latitude  = 33.675749;
     zoomLocation.longitude = -117.886806;
     
     MKPointAnnotation *annotationPoint = [[MKPointAnnotation alloc] init];
     annotationPoint.coordinate         = zoomLocation;
+    
+    // Add the proper Drop Pin Title
     annotationPoint.title              = @"Branza";
+    
+    // Add the proper Drop Pin Subtitle
     annotationPoint.subtitle           = @"Branza's headquarters";
     
     [_mapView addAnnotation:annotationPoint];
@@ -61,6 +78,7 @@
 {
     CLLocationCoordinate2D zoomLocation;
     
+    // Add the proper latitude and longitude values
     zoomLocation.latitude  = 33.675749;
     zoomLocation.longitude = -117.886806;
     

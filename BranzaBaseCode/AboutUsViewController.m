@@ -37,7 +37,7 @@
 
 - (IBAction)ShareButton:(id)sender
 {
-    UIActionSheet *awesomeActionSheet   = [[UIActionSheet alloc] initWithTitle:@"Share This app"
+    UIActionSheet *awesomeActionSheet   = [[UIActionSheet alloc] initWithTitle:@"Share This App"
                                                                       delegate:self
                                                              cancelButtonTitle:@"Cancel"
                                                         destructiveButtonTitle:nil
@@ -154,13 +154,29 @@
 #pragma mark -
 #pragma mark - Social Media Methods
 
+/*
+ 
+ FUNCTION    - openTwitterAPI
+ 
+ PARAMETERS  - None
+ 
+ DESCRIPTION - This Function will set up and call the Twitter API Service
+ 
+ TODO's      - Add the proper PNG image asset; Add the proper URL
+ 
+ */
+
 - (void)openTwitterAPI
 {
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
     {
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"iOS 6 %@ integration test!", mySLComposerSheet.serviceType]];
+        
+        // Added the proper PNG image asset
         // [mySLComposerSheet addImage:[UIImage imageNamed:@"image.png"]];
+        
+        // Add the proper URL
         // [mySLComposerSheet addURL:[NSURL URLWithString:@"http://www.StackOverflow.com/"]];
         
         [self presentViewController:mySLComposerSheet
@@ -207,13 +223,29 @@
     }];
 }
 
+/*
+ 
+ FUNCTION    - openFacebookAPI
+ 
+ PARAMETERS  - None
+ 
+ DESCRIPTION - This Function will set up and call the Facebook API Service
+ 
+ TODO's      - Add the proper PNG image asset; Add the proper URL
+ 
+ */
+
 - (void)openFacebookAPI
 {
     if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
     {
         mySLComposerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [mySLComposerSheet setInitialText:[NSString stringWithFormat:@"iOS 6 %@ integration test!", mySLComposerSheet.serviceType]];
+        
+        // Added the proper PNG image asset
         // [mySLComposerSheet addImage:[UIImage imageNamed:@"image.png"]];
+        
+        // Add the proper URL
         // [mySLComposerSheet addURL:[NSURL URLWithString:@"http://www.StackOverflow.com/"]];
         
         [self presentViewController:mySLComposerSheet
@@ -260,15 +292,28 @@
     }];
 }
 
+/*
+ 
+ FUNCTION    - openEmail
+ 
+ PARAMETERS  - None
+ 
+ DESCRIPTION - This Function will set up and call the Email API Service
+ 
+ TODO's      - Add the proper Email Subject Line; Add the proper URL and message content
+ 
+ */
+
 - (void)openEmail
 {
-    // setup the email controller
     MFMailComposeViewController* controller = [[MFMailComposeViewController alloc] init];
     
-    //important step if you want feedbacks on what the user did with your email sheet
     controller.mailComposeDelegate = self;
     
+    // Add the proper Email Subject Line
     NSString *emailSubject = @"Check out the Branza App!";
+    
+    // Add the proper URL and message content
     NSString *emailBody    = @"<a href='https://www.branza.com'>Click Here</a> to view the Branza App!";
     
     [controller setSubject:emailSubject];
