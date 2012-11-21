@@ -11,6 +11,6 @@
 @interface MenuViewController : UIViewController
 
 // UIWEBVIEWS
-@property (strong, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end

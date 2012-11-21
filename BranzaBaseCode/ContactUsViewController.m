@@ -21,7 +21,6 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
     [self.navigationController.navigationBar.topItem setTitle:@"Contact Us"];
 }
 

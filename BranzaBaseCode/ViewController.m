@@ -21,12 +21,12 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:YES animated:NO];
+    [self.navigationController.navigationBar.topItem setTitle:@"Pizza Hut"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
