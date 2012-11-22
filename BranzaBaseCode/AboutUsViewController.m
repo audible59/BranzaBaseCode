@@ -7,6 +7,8 @@
 //
 
 #import "AboutUsViewController.h"
+#import "YouTubeViewController.h"
+#import "GooglePlusViewController.h"
 
 @interface AboutUsViewController ()
 
@@ -21,9 +23,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO
-                                             animated:YES];
-    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationHeader.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar.topItem setTitle:@"About Us"];
 }
 
@@ -45,6 +45,30 @@
     
     [awesomeActionSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
     [awesomeActionSheet showInView:self.view];
+}
+
+- (IBAction)facebookButtonPressed:(id)sender
+{
+    [self openFacebookAPI];
+}
+
+- (IBAction)youtubeButtonPressed:(id)sender
+{
+    YouTubeViewController *youtubeViewController = [[YouTubeViewController alloc] init];
+    
+    [self.navigationController pushViewController:youtubeViewController animated:YES];
+}
+
+- (IBAction)twitterButtonPressed:(id)sender
+{
+    [self openTwitterAPI];
+}
+
+- (IBAction)googleButtonPressed:(id)sender
+{
+    GooglePlusViewController *googleViewController = [[GooglePlusViewController alloc] init];
+    
+    [self.navigationController pushViewController:googleViewController animated:YES];
 }
 
 #pragma mark -

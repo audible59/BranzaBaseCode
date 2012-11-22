@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MessageUI/MessageUI.h"
 
-@interface ViewController : UIViewController
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
+
+@interface ViewController : UIViewController <MFMailComposeViewControllerDelegate>
+{
+    SLComposeViewController *mySLComposerSheet;
+}
+
+// IBActions
+- (IBAction)orderNowButtonPressed:(id)sender;
+- (IBAction)facebookButtonPressed:(id)sender;
+- (IBAction)youtubeButtonPressed:(id)sender;
+- (IBAction)twitterButtonPressed:(id)sender;
+- (IBAction)googleButtonPressed:(id)sender;
 
 @end

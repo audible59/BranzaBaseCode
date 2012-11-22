@@ -18,6 +18,10 @@
 
 // IBACTIONS
 - (IBAction)ShareButton:(id)sender;
+- (IBAction)facebookButtonPressed:(id)sender;
+- (IBAction)youtubeButtonPressed:(id)sender;
+- (IBAction)twitterButtonPressed:(id)sender;
+- (IBAction)googleButtonPressed:(id)sender;
 
 // METHODS
 - (void)openEmail;

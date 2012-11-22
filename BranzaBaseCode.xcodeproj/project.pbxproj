@@ -18,6 +18,12 @@
 		384CD7FF165D584D00AD97E5 /* homeTabButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD7F7165D584D00AD97E5 /* homeTabButton@2x.png */; };
 		384CD800165D584D00AD97E5 /* menuTabButton_Pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD7F8165D584D00AD97E5 /* menuTabButton_Pressed@2x.png */; };
 		384CD801165D584D00AD97E5 /* menuTabButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD7F9165D584D00AD97E5 /* menuTabButton@2x.png */; };
+		384CD804165D60D300AD97E5 /* navigationHeader@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD803165D60D300AD97E5 /* navigationHeader@2x.png */; };
+		384CD807165D665D00AD97E5 /* homePageBanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD806165D665D00AD97E5 /* homePageBanner@2x.png */; };
+		384CD809165D7FF200AD97E5 /* bottomAd@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD808165D7FF200AD97E5 /* bottomAd@2x.png */; };
+		384CD80C165D82C000AD97E5 /* YouTubeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CD80B165D82C000AD97E5 /* YouTubeViewController.m */; };
+		384CD80F165D852200AD97E5 /* GooglePlusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384CD80E165D852200AD97E5 /* GooglePlusViewController.m */; };
+		384CD815165DAE5700AD97E5 /* aboutUsBanner@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 384CD814165DAE5700AD97E5 /* aboutUsBanner@2x.png */; };
 		389119EE164A233100983FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119ED164A233100983FB3 /* UIKit.framework */; };
 		389119F0164A233100983FB3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119EF164A233100983FB3 /* Foundation.framework */; };
 		389119F2164A233100983FB3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 389119F1164A233100983FB3 /* CoreGraphics.framework */; };
@@ -50,6 +56,14 @@
 		384CD7F7165D584D00AD97E5 /* homeTabButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeTabButton@2x.png"; sourceTree = "<group>"; };
 		384CD7F8165D584D00AD97E5 /* menuTabButton_Pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuTabButton_Pressed@2x.png"; sourceTree = "<group>"; };
 		384CD7F9165D584D00AD97E5 /* menuTabButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuTabButton@2x.png"; sourceTree = "<group>"; };
+		384CD803165D60D300AD97E5 /* navigationHeader@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navigationHeader@2x.png"; sourceTree = "<group>"; };
+		384CD806165D665D00AD97E5 /* homePageBanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homePageBanner@2x.png"; sourceTree = "<group>"; };
+		384CD808165D7FF200AD97E5 /* bottomAd@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bottomAd@2x.png"; sourceTree = "<group>"; };
+		384CD80A165D82C000AD97E5 /* YouTubeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeViewController.h; sourceTree = "<group>"; };
+		384CD80B165D82C000AD97E5 /* YouTubeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YouTubeViewController.m; sourceTree = "<group>"; };
+		384CD80D165D852200AD97E5 /* GooglePlusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GooglePlusViewController.h; sourceTree = "<group>"; };
+		384CD80E165D852200AD97E5 /* GooglePlusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GooglePlusViewController.m; sourceTree = "<group>"; };
+		384CD814165DAE5700AD97E5 /* aboutUsBanner@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "aboutUsBanner@2x.png"; sourceTree = "<group>"; };
 		389119E9164A233100983FB3 /* BranzaBaseCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BranzaBaseCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		389119ED164A233100983FB3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		389119EF164A233100983FB3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,6 +115,9 @@
 		384CD7F0165D582000AD97E5 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				384CD813165DADF400AD97E5 /* About Us */,
+				384CD805165D664B00AD97E5 /* Home Page */,
+				384CD802165D60BD00AD97E5 /* Navigation Controller */,
 				384CD7F1165D582700AD97E5 /* Tab Bar Controller */,
 			);
 			name = Images;
@@ -119,6 +136,31 @@
 				384CD7F9165D584D00AD97E5 /* menuTabButton@2x.png */,
 			);
 			name = "Tab Bar Controller";
+			sourceTree = "<group>";
+		};
+		384CD802165D60BD00AD97E5 /* Navigation Controller */ = {
+			isa = PBXGroup;
+			children = (
+				384CD803165D60D300AD97E5 /* navigationHeader@2x.png */,
+			);
+			name = "Navigation Controller";
+			sourceTree = "<group>";
+		};
+		384CD805165D664B00AD97E5 /* Home Page */ = {
+			isa = PBXGroup;
+			children = (
+				384CD808165D7FF200AD97E5 /* bottomAd@2x.png */,
+				384CD806165D665D00AD97E5 /* homePageBanner@2x.png */,
+			);
+			name = "Home Page";
+			sourceTree = "<group>";
+		};
+		384CD813165DADF400AD97E5 /* About Us */ = {
+			isa = PBXGroup;
+			children = (
+				384CD814165DAE5700AD97E5 /* aboutUsBanner@2x.png */,
+			);
+			name = "About Us";
 			sourceTree = "<group>";
 		};
 		389119DE164A233100983FB3 = {
@@ -217,6 +259,10 @@
 				38BC6B8A164AEC3800FB3786 /* LocationViewController.m */,
 				38BC6B86164AE56900FB3786 /* AboutUsViewController.h */,
 				38BC6B87164AE56900FB3786 /* AboutUsViewController.m */,
+				384CD80A165D82C000AD97E5 /* YouTubeViewController.h */,
+				384CD80B165D82C000AD97E5 /* YouTubeViewController.m */,
+				384CD80D165D852200AD97E5 /* GooglePlusViewController.h */,
+				384CD80E165D852200AD97E5 /* GooglePlusViewController.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -303,6 +349,10 @@
 				384CD7FF165D584D00AD97E5 /* homeTabButton@2x.png in Resources */,
 				384CD800165D584D00AD97E5 /* menuTabButton_Pressed@2x.png in Resources */,
 				384CD801165D584D00AD97E5 /* menuTabButton@2x.png in Resources */,
+				384CD804165D60D300AD97E5 /* navigationHeader@2x.png in Resources */,
+				384CD807165D665D00AD97E5 /* homePageBanner@2x.png in Resources */,
+				384CD809165D7FF200AD97E5 /* bottomAd@2x.png in Resources */,
+				384CD815165DAE5700AD97E5 /* aboutUsBanner@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +370,8 @@
 				38BC6B81164AE23F00FB3786 /* MenuViewController.m in Sources */,
 				38BC6B88164AE56900FB3786 /* AboutUsViewController.m in Sources */,
 				38BC6B8B164AEC3800FB3786 /* LocationViewController.m in Sources */,
+				384CD80C165D82C000AD97E5 /* YouTubeViewController.m in Sources */,
+				384CD80F165D852200AD97E5 /* GooglePlusViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
