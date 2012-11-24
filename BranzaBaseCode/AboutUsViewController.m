@@ -53,7 +53,7 @@
 
 - (IBAction)ShareButton:(id)sender
 {
-    UIActionSheet *awesomeActionSheet   = [[UIActionSheet alloc] initWithTitle:@"Share This App"
+    UIActionSheet *awesomeActionSheet = [[UIActionSheet alloc] initWithTitle:@"Share This App"
                                                                       delegate:self
                                                              cancelButtonTitle:@"Cancel"
                                                         destructiveButtonTitle:nil

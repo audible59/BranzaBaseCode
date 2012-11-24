@@ -87,7 +87,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="339" id="yFW-5Z-PM8"/>
                                 </constraints>
-                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -156,15 +156,40 @@
             <objects>
                 <viewController id="5et-vL-M5H" userLabel="Contact Us View Controller" customClass="ContactUsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s7i-sb-m00">
-                        <rect key="frame" x="0.0" y="20" width="320" height="499"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="zDX-8E-iAT">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="Vd6-wL-uBi"/>
+                                </constraints>
+                            </tableView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-XO-Jgi">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="227" id="13G-Oi-Bf9"/>
+                                </constraints>
+                            </mapView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zDX-8E-iAT" firstAttribute="bottom" secondItem="s7i-sb-m00" secondAttribute="bottom" type="default" id="1DZ-bM-mef"/>
+                            <constraint firstItem="zDX-8E-iAT" firstAttribute="trailing" secondItem="s7i-sb-m00" secondAttribute="trailing" type="default" id="Bum-qb-xCh"/>
+                            <constraint firstItem="rz4-XO-Jgi" firstAttribute="leading" secondItem="s7i-sb-m00" secondAttribute="leading" type="default" id="F3h-gb-9bM"/>
+                            <constraint firstItem="zDX-8E-iAT" firstAttribute="leading" secondItem="s7i-sb-m00" secondAttribute="leading" type="default" id="LJ6-8M-Jcj"/>
+                            <constraint firstItem="rz4-XO-Jgi" firstAttribute="top" secondItem="s7i-sb-m00" secondAttribute="top" type="default" id="aSN-rg-FCZ"/>
+                            <constraint firstItem="rz4-XO-Jgi" firstAttribute="trailing" secondItem="s7i-sb-m00" secondAttribute="trailing" type="default" id="tQb-wu-Eqh"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="w5C-fc-C4A"/>
+                    <navigationItem key="navigationItem" id="ptD-Gl-o7L"/>
+                    <connections>
+                        <outlet property="mapView" destination="rz4-XO-Jgi" id="rNP-6i-yLd"/>
+                        <outlet property="tableView" destination="zDX-8E-iAT" id="j2v-IN-PPD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EkD-dW-2eq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117" y="931"/>
+            <point key="canvasLocation" x="643" y="931"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Ytl-Vs-tMa">
@@ -382,7 +407,7 @@
                     <connections>
                         <segue destination="Uik-uh-Lyi" kind="relationship" relationship="viewControllers" id="Yzw-eH-F7m"/>
                         <segue destination="ivV-EM-52R" kind="relationship" relationship="viewControllers" id="IdV-Dg-HNA"/>
-                        <segue destination="5et-vL-M5H" kind="relationship" relationship="viewControllers" id="teQ-qM-DmK"/>
+                        <segue destination="zCE-zR-rWm" kind="relationship" relationship="viewControllers" id="teQ-qM-DmK"/>
                         <segue destination="mjd-3c-zew" kind="relationship" relationship="viewControllers" id="VYT-q9-GId"/>
                     </connections>
                 </tabBarController>
@@ -466,56 +491,31 @@
             </objects>
             <point key="canvasLocation" x="117" y="1664"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dGZ-DX-lEk">
+            <objects>
+                <navigationController id="zCE-zR-rWm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" id="w5C-fc-C4A"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zmX-FQ-hBv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5et-vL-M5H" kind="relationship" relationship="rootViewController" id="n1b-Du-YVq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fn3-N6-mkI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117" y="931"/>
+        </scene>
     </scenes>
     <resources>
         <image name="aboutUsBanner@2x.png" width="640" height="229"/>
         <image name="bottomAd@2x.png" width="640" height="99"/>
         <image name="homePageBanner@2x.png" width="640" height="231"/>
     </resources>
-    <classes>
-        <class className="AboutUsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AboutUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="ShareButton:"/>
-                <relationship kind="action" name="facebookButtonPressed:"/>
-                <relationship kind="action" name="googleButtonPressed:"/>
-                <relationship kind="action" name="twitterButtonPressed:"/>
-                <relationship kind="action" name="youtubeButtonPressed:"/>
-                <relationship kind="outlet" name="scrollView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="ContactUsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContactUsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="callButton:"/>
-            </relationships>
-        </class>
-        <class className="GooglePlusViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GooglePlusViewController.h"/>
-        </class>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="facebookButtonPressed:"/>
-                <relationship kind="action" name="googleButtonPressed:"/>
-                <relationship kind="action" name="orderNowButtonPressed:"/>
-                <relationship kind="action" name="twitterButtonPressed:"/>
-                <relationship kind="action" name="youtubeButtonPressed:"/>
-            </relationships>
-        </class>
-        <class className="YouTubeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/YouTubeViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

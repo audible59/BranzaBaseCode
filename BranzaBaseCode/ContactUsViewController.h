@@ -7,9 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface ContactUsViewController : UIViewController
+@interface ContactUsViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+{
+    CLLocationManager *locationManager;
+}
 
-- (IBAction)callButton:(id)sender;
+// MKMAPVIEW
+@property (strong, nonatomic) IBOutlet MKMapView *mapView;
+
+// UITABLEVIEW
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
