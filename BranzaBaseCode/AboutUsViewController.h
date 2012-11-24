@@ -16,6 +16,9 @@
     SLComposeViewController *mySLComposerSheet;
 }
 
+// UISCROLLVIEWS
+@property (strong, nonatomic) IBOutlet UITextView *scrollView;
+
 // IBACTIONS
 - (IBAction)ShareButton:(id)sender;
 - (IBAction)facebookButtonPressed:(id)sender;

@@ -27,6 +27,22 @@
     [self.navigationController.navigationBar.topItem setTitle:@"About Us"];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    CGSize result = [[UIScreen mainScreen] bounds].size;
+    
+    if(result.height == 480)
+    {
+        [self.scrollView setScrollEnabled:YES];
+        [self.scrollView setContentSize: CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height + 180)];
+    }
+    else if(result.height == 568)
+    {
+        [self.scrollView setScrollEnabled:YES];
+        [self.scrollView setContentSize: CGSizeMake(self.scrollView.frame.size.width, self.scrollView.frame.size.height + 100)];
+    }
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
