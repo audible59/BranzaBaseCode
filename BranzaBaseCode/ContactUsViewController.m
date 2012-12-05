@@ -7,6 +7,8 @@
 //
 
 #import "ContactUsViewController.h"
+#import "GoogleMapsViewController.h"
+#import "CustomCell.h"
 
 @interface ContactUsViewController ()
 
@@ -14,7 +16,10 @@
 
 @implementation ContactUsViewController
 
-@synthesize mapView = _mapView;
+@synthesize data           = _data;
+@synthesize mapView        = _mapView;
+@synthesize tableView      = _tableView;
+@synthesize tableViewArray = _tableViewArray;
 
 #pragma mark -
 #pragma mark View Life Cycle
@@ -38,7 +43,8 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationHeader.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar.topItem setTitle:@"Contact Us"];
     
-    self.mapView.delegate = self;
+    self.tableViewArray   = [[NSArray alloc] initWithObjects:@"866-323-7538",
+                                      @"2900 Bristol Costa Mesa, \nCA 92626", nil];
     
     locationManager = [[CLLocationManager alloc] init];
     [locationManager setDelegate:self];
@@ -63,39 +69,33 @@
     // Add the proper Drop Pin Subtitle
     annotationPoint.subtitle           = @"Branza's headquarters";
     
-    [_mapView addAnnotation:annotationPoint];
+    [self.mapView addAnnotation:annotationPoint];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{    
+    if(IS_IPHONE_5)
+    {
+        self.mapView.frame = CGRectMake(0.0, 0.0, 320.0, 228.0);
+        
+        self.tableView     = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 226.0, 320.0, 228.0)];
+    }
+    else
+    {
+        self.mapView.frame = CGRectMake(0.0, 0.0, 320.0, 198.0);
+        
+        self.tableView     = [[UITableView alloc] initWithFrame:CGRectMake(0.0, 196.0, 320.0, 169.0)];
+    }
+    
+    self.tableView.dataSource = self;
+    self.tableView.delegate   = self;
+    
+    self.mapView.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-#pragma mark -
-#pragma mark IBActions
-
-/*
- 
- FUNCTION    - callButton:(id)sender
- 
- PARAMETERS  - sender
- 
- DESCRIPTION - This Function will set up and allow the user to place a call
- 
- TODO's      - Add the proper telephone number
- 
- */
-
-- (IBAction)callButton:(id)sender
-{
-    // Add the proper telephone number
-    NSString *phoneNumber = @"866-323-7538";
-    
-    NSString *cleanedString  = [[phoneNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
-    NSURL *cleanedCallString = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", cleanedString]];
-    
-    UIApplication *application = [UIApplication sharedApplication];
-    [application openURL:cleanedCallString];
 }
 
 #pragma mark -
@@ -117,6 +117,139 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     self.mapView.centerCoordinate = userLocation.location.coordinate;
+}
+
+#pragma mark -
+#pragma mark - Table view data source
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 2;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat sectionFloat = 0.0;
+    
+    if(indexPath.section == 0)
+    {
+        sectionFloat = 40.0;
+    }
+    else if(indexPath.section == 1)
+    {
+        sectionFloat = (44.0 + (2 - 1) * 19.0);
+    }
+    
+    return sectionFloat;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    CGFloat sectionHeaderFloat = 0.0;
+    
+    if(section == 0)
+    {
+        sectionHeaderFloat = 20.0;
+    }
+    
+    return sectionHeaderFloat;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *CellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
+    }
+    
+    if(indexPath.section == 0)
+    {
+        cell.textLabel.text       = @"phone";
+        cell.detailTextLabel.text = [self.tableViewArray objectAtIndex:indexPath.section];
+    }
+    else if(indexPath.section == 1)
+    {
+        cell.textLabel.text       = @"address";
+        cell.detailTextLabel.text = [self.tableViewArray objectAtIndex:indexPath.section];
+        cell.detailTextLabel.numberOfLines = 2;
+        cell.detailTextLabel.lineBreakMode = UILineBreakModeWordWrap;
+    }
+    
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    
+    return cell;
+}
+
+#pragma mark
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UIAlertView *phoneAlert = [[UIAlertView alloc] initWithTitle:@"Phone Call"
+                                                         message:@"Would you like to call Round Table Pizza?"
+                                                        delegate:self
+                                               cancelButtonTitle:@"cancel"
+                                               otherButtonTitles:@"call", nil];
+    
+    GoogleMapsViewController *googleMapsViewController = [[GoogleMapsViewController alloc] init];
+    
+    switch (indexPath.section)
+    {
+        case 0:
+            
+            [phoneAlert show];
+            
+            break;
+            
+        case 1:
+            
+            [self.navigationController pushViewController:googleMapsViewController animated:YES];
+            
+            break;
+            
+        default:
+            break;
+    }
+}
+
+#pragma mark -
+#pragma mark UIAlertView Delegate Methods
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex == 0)
+    {
+        // Do nothing, the call was cancelled
+    }
+    else if(buttonIndex == 1)
+    {
+        // make the call
+        [self callButtonPressed];
+    }
+}
+
+#pragma mark -
+#pragma mark Helper Methods
+
+- (void)callButtonPressed
+{
+    // Add the proper telephone number
+    NSString *phoneNumber = @"866-323-7538";
+    
+    NSString *cleanedString  = [[phoneNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"0123456789-+()"] invertedSet]] componentsJoinedByString:@""];
+    NSURL *cleanedCallString = [NSURL URLWithString:[NSString stringWithFormat:@"tel:%@", cleanedString]];
+    
+    UIApplication *application = [UIApplication sharedApplication];
+    [application openURL:cleanedCallString];
 }
 
 @end

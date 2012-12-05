@@ -10,7 +10,7 @@
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-@interface ContactUsViewController : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>
+@interface ContactUsViewController : UIViewController <MKMapViewDelegate, UIAlertViewDelegate, CLLocationManagerDelegate, UITableViewDataSource, UITableViewDelegate>
 {
     CLLocationManager *locationManager;
 }
@@ -20,5 +20,13 @@
 
 // UITABLEVIEW
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+// NSARRAY
+@property (strong, nonatomic) NSArray *data;
+@property (strong, nonatomic) NSArray *tableViewArray;
+
+// METHODS
+
+- (void)callButtonPressed;
 
 @end

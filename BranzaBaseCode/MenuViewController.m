@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"navigationHeader.png"] forBarMetrics:UIBarMetricsDefault];
     [self.navigationController.navigationBar.topItem setTitle:@"Menu"];
     
     // Add the proper PDF file name

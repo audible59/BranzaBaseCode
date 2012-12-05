@@ -7,12 +7,32 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+//    ViewController *rootViewController = [[ViewController alloc] init];
+//    
+//    UIImageView*imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Default-568h@2x.png"]];
+//    
+//    [[rootViewController view] addSubview:imageView];
+//    [[rootViewController view] bringSubviewToFront:imageView];
+//    
+//    [self.window makeKeyAndVisible];
+//    
+//    [UIView transitionWithView:self.window duration:3.0f
+//                       options:UIViewAnimationOptionTransitionNone
+//                    animations:^(void)
+//                    {
+//                        imageView.alpha = 0.0f;
+//                    }
+//                    completion:^(BOOL finished)
+//                    {
+//                        [imageView removeFromSuperview];
+//                    }];
+    
     return YES;
 }
 							
